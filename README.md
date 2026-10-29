@@ -1,6 +1,6 @@
 # speculative-storyteller
 
-**System Dynamics × Speculative Fiction** —— システムダイナミクスとスペキュラティブ・デザインを統合し、現在の「弱い兆し」を増幅した未来を、因果構造に裏打ちされた物語として自動生成する [Claude Agent Skill](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview) です。
+**System Dynamics × Speculative Fiction** —— システムダイナミクスとスペキュラティブ・デザインを統合し、現在の「弱い兆し」を増幅した未来を、因果構造に裏打ちされた物語として自動生成する [Agent Skill](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview) です。
 
 舞台・年代・キーワードなどの設定条件を渡すと、以下を一貫した内部ロジックで生成します。
 
@@ -24,6 +24,65 @@
   動物・植物・AI・建築物・ウイルスなど、非人間アクターをシステム変数の変化を感知する独自の環世界（Umwelt）を持つ存在として描くセクションを含みます。
 - **ファクトチェック・セクションを標準搭載**
   生成した前提がFutures Coneの飛躍度およびセクション０の因果構造と整合しているかを検証し、ステークホルダー別の論点と構造的課題を抽出します。
+
+## 従来の課題に対する解決アプローチ
+
+```mermaid
+flowchart LR
+    %% 列ヘッダー
+    HP["従来の課題"] ~~~ HS["speculative-storyteller の解決機構"] ~~~ HV["社会実装での達成価値"]
+
+    %% 行1
+    P1["1. 分析（データ）と創造（物語）の分断"]
+    S1["<b>システム構造分析 × ナラティブ翻訳</b><br/>ストック・フロー・ループ(R/B)を物語要素へ変換"]
+    V1["論理的根拠（トレーサビリティ）と物語の没入感の両立"]
+    P1 --> S1 --> V1
+
+    %% 行2
+    P2["2. インフラ老朽化・人口減少の「時間差危機」"]
+    S2["<b>時間的遅れ(‖) × バタフライエフェクト</b><br/>出来事→フロー→ストック→(‖ X年遅延)の構造化"]
+    V2["20〜30年後の「合成の誤謬」を劇的アイロニーとして事前可視化"]
+    P2 --> S2 --> V2
+
+    %% 行3
+    P3["3. 世代間ギャップと多主体の価値観対立"]
+    S3["<b>高齢者/若者対比 × 複数視点分岐</b><br/>3ループまたは3主体以上で複数視点プロットへ自動分岐"]
+    V3["一面的なユートピア/ディストピアを排した多角的な合意形成の叩き台"]
+    P3 --> S3 --> V3
+
+    %% 行4
+    P4["4. 人間中心主義の限界（インフラ視点の欠如）"]
+    S4["<b>人間以外の視点（More-than-Human）</b><br/>建築物・AI・動植物の環世界（Umwelt）から描写"]
+    V4["老朽化する橋梁・水道管・空き家・AIをアクター化した都市・インフラ洞察"]
+    P4 --> S4 --> V4
+
+    %% 行5
+    P5["5. 生成AIの「平均的で陳腐なSF」への収束"]
+    S5["<b>消極的主人公設定 × 各章CoTループ検証</b><br/>各章ごとに直前要約・ループ整合検証＋専門用語の日常語化"]
+    V5["安易な技術解決ハッピーエンドを封じた生々しい人間葛藤ドラマの生成"]
+    P5 --> S5 --> V5
+
+    %% 行6
+    P6["6. 物語の作りっぱなし（政策へ繋がらない）"]
+    S6["<b>ファクトチェック＆構造的課題抽出</b><br/>Futures Cone整合検証＋ループ・遅延に紐づく論点化"]
+    V6["ループと時間的遅れを根拠にした現在の政策・意思決定への逆算"]
+    P6 --> S6 --> V6
+
+    %% スタイル
+    classDef hp fill:#b3261e,stroke:#b3261e,color:#fff,font-weight:bold
+    classDef hs fill:#1f2a44,stroke:#1f2a44,color:#fff,font-weight:bold
+    classDef hv fill:#17683c,stroke:#17683c,color:#fff,font-weight:bold
+    classDef prob fill:#fdeceb,stroke:#b3261e,color:#5a1410
+    classDef sol fill:#1f2a44,stroke:#1f2a44,color:#fff
+    classDef val fill:#e3f3e6,stroke:#17683c,color:#0f3d22
+
+    class HP hp
+    class HS hs
+    class HV hv
+    class P1,P2,P3,P4,P5,P6 prob
+    class S1,S2,S3,S4,S5,S6 sol
+    class V1,V2,V3,V4,V5,V6 val
+```
 
 ---
 
